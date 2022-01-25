@@ -1,0 +1,57 @@
+---
+---
+
+@use "sass:color";
+
+// These colours come from the InspIRCd logo.
+$logo_white:  #EEEEEE;
+$logo_grey:   #3C4249;
+$logo_red:    #EF4F45;
+
+// These colours were picked because they look good.
+:root {
+  --nav-background:  #FCFAF7;
+  --nav-border:      #E2DDD2;
+  --page-background: #F7F4EF;
+  --text:            #{$logo_grey};
+
+  @media (prefers-color-scheme: dark) {
+    --nav-background:  #1E1E1E;
+    --nav-border:      #333333;
+    --page-background: #121212;
+    --text:            #{$logo_white};
+  }
+}
+
+body {
+  background-color: var(--page-background);
+  color:            var(--text);
+  font-family:      "Noto Sans", sans-serif;
+
+  a {
+    color: color.adjust($logo_red, $lightness: -15%);
+
+    @media (prefers-color-scheme: dark) {
+      color: color.adjust($logo_red, $lightness: 15%);
+    }
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  .insp-btn {
+    color:            var(--nav-background);
+    background-color: var(--text);
+  }
+
+  .insp-nav-top {
+    background:    var(--nav-background);
+    border-bottom: 1px solid var(--nav-border);
+    font-size:     0.9rem;
+
+   .nav-link {
+      color: var(--text);
+    }
+  }
+}
