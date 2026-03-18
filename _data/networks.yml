@@ -28,3 +28,13 @@
     port: 6697
     chan: "#teranova"
   url: https://www.teranova.net
+
+- name: HybridIRC
+  contact: HybridIRC Administration <support@hybridirc.com>
+  description: >-
+    Next generation modern IRC network for free and open online communication.
+  server:
+    host: irc.hybridirc.com
+    port: 6697
+    chan: "#hybridirc"
+  url: https://www.hybridirc.com
